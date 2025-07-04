@@ -1,0 +1,5 @@
+packages:
+  - "module-federation/host"
+  - "module-federation/remote"
+  - "originjs-federation/host"
+  - "originjs-federation/remote" 

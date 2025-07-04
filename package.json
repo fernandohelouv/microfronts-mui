@@ -1,0 +1,25 @@
+{
+  "name": "micro-fronts-monorepo",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Monorepo for microfrontend examples using Module Federation",
+  "scripts": {
+    "dev:module-fed": "pnpm --filter \"@micro-fronts/module-fed-*\" dev",
+    "dev:originjs": "pnpm --filter \"@micro-fronts/originjs-*\" dev",
+    "dev:all": "concurrently \"pnpm dev:module-fed\" \"pnpm dev:originjs\"",
+    "build:module-fed": "pnpm --filter \"@micro-fronts/module-fed-*\" build",
+    "build:originjs": "pnpm --filter \"@micro-fronts/originjs-*\" build",
+    "build:all": "pnpm --filter \"@micro-fronts/*\" build",
+    "preview:module-fed": "pnpm --filter \"@micro-fronts/module-fed-*\" preview",
+    "preview:originjs": "pnpm --filter \"@micro-fronts/originjs-*\" preview",
+    "preview:all": "concurrently \"pnpm preview:module-fed\" \"pnpm preview:originjs\"",
+    "install:all": "pnpm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  }
+}
